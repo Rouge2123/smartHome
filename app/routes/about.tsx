@@ -8,7 +8,8 @@ export function meta({}: Route.MetaArgs) {
     { title: `${siteTitle} | About us` },
     {
       name: "description",
-      content: "Team page with profiles, hobbies, and social links for the smart-home project.",
+      content:
+        "Team page with profiles, hobbies, and social links for the smart-home project.",
     },
   ];
 }
@@ -27,14 +28,14 @@ export default function AboutPage() {
                 The people behind the smart-home project
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-[#265a60] sm:text-xl">
-                This page is for the team. Each person has a profile card and a dedicated detail page with more information.
+                This page is for the team. Each person has a profile card and a
+                dedicated detail page with more information.
               </p>
             </div>
 
             <Link
               to="/"
-              className="inline-flex items-center justify-center rounded-full bg-[#0b7f86] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0a6d74]"
-            >
+              className="inline-flex items-center justify-center rounded-full bg-[#0b7f86] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0a6d74]">
               Back to project
             </Link>
           </div>
@@ -46,8 +47,7 @@ export default function AboutPage() {
               <Link
                 key={person.slug}
                 to={`/team/${person.slug}`}
-                className="group block rounded-[1.75rem] border border-[#0f7f84]/15 bg-[#effffd] p-4 shadow-[0_16px_40px_rgba(8,36,41,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(8,36,41,0.12)]"
-              >
+                className="group block rounded-[1.75rem] border border-[#0f7f84]/15 bg-[#effffd] p-4 shadow-[0_16px_40px_rgba(8,36,41,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(8,36,41,0.12)]">
                 <div className="overflow-hidden rounded-[1.25rem] border border-[#0f7f84]/15 bg-[#d7fbf8]">
                   <img
                     src={person.portrait}
@@ -69,13 +69,14 @@ export default function AboutPage() {
                       Details
                     </span>
                   </div>
-                  <p className="text-sm leading-7 text-[#265a60]">{person.bio}</p>
+                  <p className="text-sm leading-7 text-[#265a60]">
+                    {person.bio}
+                  </p>
                   <ul className="flex flex-wrap gap-2 text-sm text-[#24575d]">
                     {person.hobbies.map((hobby) => (
                       <li
                         key={hobby}
-                        className="rounded-full border border-[#0f7f84]/15 bg-white px-3 py-1"
-                      >
+                        className="rounded-full border border-[#0f7f84]/15 bg-white px-3 py-1">
                         {hobby}
                       </li>
                     ))}
@@ -96,11 +97,14 @@ export default function AboutPage() {
                 Copy this and fill it out for your team
               </h2>
               <p className="text-sm leading-7 text-[#265a60]">
-                Share the template below with your teammates, then paste the filled-in answers back here and I can drop them into the site.
+                Share the template below with your teammates, then paste the
+                filled-in answers back here and I can drop them into the site.
               </p>
             </div>
 
-            <pre className="overflow-x-auto rounded-[1.5rem] border border-[#0f7f84]/15 bg-[#083a42] p-5 text-sm leading-7 text-[#e7fffd] shadow-[0_18px_45px_rgba(8,58,66,0.16)]"><code>{teamTemplate}</code></pre>
+            <pre className="overflow-x-auto rounded-[1.5rem] border border-[#0f7f84]/15 bg-[#083a42] p-5 text-sm leading-7 text-[#e7fffd] shadow-[0_18px_45px_rgba(8,58,66,0.16)]">
+              <code>{teamTemplate}</code>
+            </pre>
           </div>
         </section>
       </div>

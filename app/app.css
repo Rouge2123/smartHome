@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    "Manrope", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display:
+    "Space Grotesk", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 :root {
@@ -20,9 +22,21 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(54, 214, 207, 0.28), transparent 30%),
-    radial-gradient(circle at top right, rgba(18, 153, 166, 0.2), transparent 32%),
-    radial-gradient(circle at bottom right, rgba(7, 96, 108, 0.12), transparent 28%),
+    radial-gradient(
+      circle at top left,
+      rgba(54, 214, 207, 0.28),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(18, 153, 166, 0.2),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(7, 96, 108, 0.12),
+      transparent 28%
+    ),
     linear-gradient(180deg, #f6ffff 0%, #dff6f4 100%);
   color: #082429;
 }
@@ -51,4 +65,3 @@ img {
 .font-display {
   font-family: var(--font-display);
 }
-

@@ -13,7 +13,8 @@ export function meta({}: Route.MetaArgs) {
     { title: `${siteTitle} | Project` },
     {
       name: "description",
-      content: "Smart-home project showcase with demo video and automation details.",
+      content:
+        "Smart-home project showcase with demo video and automation details.",
     },
   ];
 }
@@ -32,22 +33,21 @@ export default function Home() {
                 A smart home prototype built to react to the environment
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-[#265a60] sm:text-xl">
-                We built a basic smart-home instance that reacts to the environment:
-                curtains open when it gets dark, the light turns on, and the fan
-                switches on when it is warm and off when it becomes cool again.
+                We built a basic smart-home instance that reacts to the
+                environment: curtains open when it gets dark, the light turns
+                on, and the fan switches on when it is warm and off when it
+                becomes cool again.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
               <a
                 href="#project"
-                className="rounded-full bg-[#0b7f86] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0a6d74]"
-              >
+                className="rounded-full bg-[#0b7f86] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0a6d74]">
                 Jump to project
               </a>
               <a
                 href="/about"
-                className="rounded-full border border-[#0f7f84]/20 bg-white px-5 py-3 text-sm font-semibold text-[#07333b] transition hover:-translate-y-0.5 hover:border-[#0f7f84]/40 hover:bg-[#eefefd]"
-              >
+                className="rounded-full border border-[#0f7f84]/20 bg-white px-5 py-3 text-sm font-semibold text-[#07333b] transition hover:-translate-y-0.5 hover:border-[#0f7f84]/40 hover:bg-[#eefefd]">
                 About the team
               </a>
             </div>
@@ -57,9 +57,10 @@ export default function Home() {
             {projectStats.map((stat) => (
               <article
                 key={stat.label}
-                className="rounded-[1.5rem] border border-[#0f7f84]/15 bg-[#effffd] p-4 shadow-sm"
-              >
-                <p className="text-3xl font-semibold text-[#07333b]">{stat.value}</p>
+                className="rounded-[1.5rem] border border-[#0f7f84]/15 bg-[#effffd] p-4 shadow-sm">
+                <p className="text-3xl font-semibold text-[#07333b]">
+                  {stat.value}
+                </p>
                 <p className="mt-1 text-sm uppercase tracking-[0.24em] text-[#0f7f84]">
                   {stat.label}
                 </p>
@@ -68,7 +69,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="project" className="border-t border-[#0f7f84]/10 px-6 py-8 lg:px-10">
+        <section
+          id="project"
+          className="border-t border-[#0f7f84]/10 px-6 py-8 lg:px-10">
           <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="space-y-4">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#0f7f84]">
@@ -78,17 +81,20 @@ export default function Home() {
                 Automation that is easy to understand and easy to demo
               </h2>
               <p className="max-w-xl text-base leading-8 text-[#265a60]">
-                The project was designed to show a practical smart-home workflow:
-                detect light, react to temperature, and give a simple visual result
-                that works well in a presentation.
+                The project was designed to show a practical smart-home
+                workflow: detect light, react to temperature, and give a simple
+                visual result that works well in a presentation.
               </p>
               <div className="rounded-[1.5rem] border border-[#0f7f84]/15 bg-[#083a42] p-5 text-white shadow-[0_18px_45px_rgba(8,58,66,0.18)]">
                 <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#8ef7f1]">
                   Demo video
                 </p>
                 <p className="mt-2 text-sm leading-7 text-white/80">
-                  The video slot is ready for your project recording. Drop the file
-                  in <span className="font-medium">public/smart-home-demo.mp4</span>
+                  The video slot is ready for your project recording. Drop the
+                  file in{" "}
+                  <span className="font-medium">
+                    public/smart-home-demo.mp4
+                  </span>
                   and it will appear here.
                 </p>
               </div>
@@ -99,8 +105,7 @@ export default function Home() {
                 <video
                   controls
                   poster={projectVideoPoster}
-                  className="aspect-video w-full bg-black"
-                >
+                  className="aspect-video w-full bg-black">
                   <source src={projectVideoSrc} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
@@ -110,8 +115,7 @@ export default function Home() {
                 {projectHighlights.map((highlight) => (
                   <article
                     key={highlight.title}
-                    className="rounded-[1.5rem] border border-[#0f7f84]/15 bg-white p-5 shadow-sm"
-                  >
+                    className="rounded-[1.5rem] border border-[#0f7f84]/15 bg-white p-5 shadow-sm">
                     <h3 className="font-display text-xl text-[#07333b]">
                       {highlight.title}
                     </h3>

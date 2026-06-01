@@ -32,8 +32,7 @@ export default function PersonPage() {
         <div className="border-b border-black/8 px-6 py-5 lg:px-10">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-[#fff8ee] px-4 py-2 text-sm font-semibold text-[#1f1812] transition hover:-translate-y-0.5 hover:bg-white"
-          >
+            className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-[#fff8ee] px-4 py-2 text-sm font-semibold text-[#1f1812] transition hover:-translate-y-0.5 hover:bg-white">
             Back to overview
           </Link>
         </div>
@@ -65,7 +64,9 @@ export default function PersonPage() {
                 <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#8b6f58]">
                   Role
                 </p>
-                <p className="mt-2 text-lg font-medium text-[#1f1812]">{person.role}</p>
+                <p className="mt-2 text-lg font-medium text-[#1f1812]">
+                  {person.role}
+                </p>
               </article>
               <article className="rounded-[1.5rem] border border-black/10 bg-[#fffaf2] p-5">
                 <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#8b6f58]">
@@ -86,8 +87,7 @@ export default function PersonPage() {
                   {person.hobbies.map((hobby) => (
                     <li
                       key={hobby}
-                      className="rounded-full border border-black/8 bg-[#faf5ec] px-4 py-2"
-                    >
+                      className="rounded-full border border-black/8 bg-[#faf5ec] px-4 py-2">
                       {hobby}
                     </li>
                   ))}
@@ -105,10 +105,13 @@ export default function PersonPage() {
                       href={social.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center justify-between rounded-2xl border border-black/10 bg-[#fffaf2] px-4 py-3 transition hover:-translate-y-0.5 hover:bg-white"
-                    >
-                      <span className="font-medium text-[#1f1812]">{social.label}</span>
-                      <span className="text-sm text-[#7a624f]">{social.handle}</span>
+                      className="flex items-center justify-between rounded-2xl border border-black/10 bg-[#fffaf2] px-4 py-3 transition hover:-translate-y-0.5 hover:bg-white">
+                      <span className="font-medium text-[#1f1812]">
+                        {social.label}
+                      </span>
+                      <span className="text-sm text-[#7a624f]">
+                        {social.handle}
+                      </span>
                     </a>
                   ))}
                 </div>
@@ -140,15 +143,16 @@ export default function PersonPage() {
                 <Link
                   key={entry.slug}
                   to={`/team/${entry.slug}`}
-                  className="group overflow-hidden rounded-[1.5rem] border border-black/10 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(49,33,19,0.12)]"
-                >
+                  className="group overflow-hidden rounded-[1.5rem] border border-black/10 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(49,33,19,0.12)]">
                   <img
                     src={entry.portrait}
                     alt={entry.name}
                     className="h-56 w-full object-cover transition duration-500 group-hover:scale-[1.02]"
                   />
                   <div className="p-4">
-                    <p className="font-display text-2xl text-[#1f1812]">{entry.name}</p>
+                    <p className="font-display text-2xl text-[#1f1812]">
+                      {entry.name}
+                    </p>
                     <p className="mt-1 text-sm text-[#5b4a3f]">{entry.role}</p>
                   </div>
                 </Link>
