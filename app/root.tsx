@@ -36,10 +36,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <div className="pointer-events-none fixed inset-0 z-0">
           <LiquidChromeInline
-            baseColor={[0.00784313725490196, 0.13725490196078433, 0.13725490196078433]}
+            baseColor={[
+              0.00784313725490196, 0.13725490196078433, 0.13725490196078433,
+            ]}
             speed={1}
-            amplitude={0.6}
-            interactive={false}
+            amplitude={0.3}
+            interactive={true}
           />
         </div>
         <div className="relative z-10">{children}</div>
