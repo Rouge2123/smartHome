@@ -38,12 +38,37 @@ export default function PersonPage() {
         </div>
 
         <section className="grid gap-8 px-6 py-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-10">
-          <div className="overflow-hidden rounded-[1.75rem] border border-black/10 bg-[#f6ede0] shadow-[0_20px_50px_rgba(49,33,19,0.1)]">
-            <img
-              src={person.portrait}
-              alt={person.name}
-              className="h-full w-full object-cover"
-            />
+          <div className="space-y-4">
+            <div className="overflow-hidden rounded-[1.75rem] border border-black/10 bg-[#f6ede0] shadow-[0_20px_50px_rgba(49,33,19,0.1)]">
+              <img
+                src={person.portrait}
+                alt={person.name}
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            {/* Conditional animation embed for selected profiles */}
+            {(() => {
+              const animMap: Record<string, string> = {
+                roxanne: "https://www.reactbits.dev/animations/shape-blur",
+                nandhan: "https://www.reactbits.dev/animations/laser-flow",
+                botond: "https://www.reactbits.dev/animations/pixel-trail",
+              };
+
+              const src = animMap[person.slug as string];
+              if (!src) return null;
+
+              return (
+                <div className="overflow-hidden rounded-lg border border-black/10 bg-white">
+                  <iframe
+                    title={`${person.name} animation`}
+                    src={src}
+                    className="w-full h-56 border-0"
+                    loading="lazy"
+                  />
+                </div>
+              );
+            })()}
           </div>
 
           <div className="space-y-6">

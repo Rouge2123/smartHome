@@ -81,7 +81,7 @@ function createVideoPosterDataUri() {
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
 
-export const projectVideoSrc = "/smart-home-demo.mp4";
+export const projectVideoSrc = "/app/content/img/demo.MOV";
 export const projectVideoPoster = createVideoPosterDataUri();
 
 export const projectStats = [
@@ -115,124 +115,97 @@ export const projectHighlights = [
 
 export const people: Person[] = [
   {
-    slug: "person-one",
-    name: "Team Member One",
-    role: "Presentation and visuals",
-    bio:
-      "Focuses on how the project looks and how the final presentation feels to the audience.",
-    contribution: "Prepared the story, visuals, and presentation flow for the demo.",
-    hobbies: ["Photography", "Music", "Travel"],
+    slug: "botond",
+    name: "Botond Nemeth",
+    role: "C# coder and Builder",
+    bio: "Mechatroniks student from Hungary",
+    contribution: "Core builder and implementation support",
+    hobbies: ["Frizbee", "Bicycle", "Cooking", "Hiking", "Watching TV-shows"],
     socials: [
-      {
-        label: "GitHub",
-        href: "https://github.com/your-handle-one",
-        handle: "github.com/your-handle-one",
-      },
-      {
-        label: "LinkedIn",
-        href: "https://www.linkedin.com/in/your-profile-one/",
-        handle: "linkedin.com/in/your-profile-one",
-      },
-      {
-        label: "Instagram",
-        href: "https://instagram.com/your-handle-one",
-        handle: "instagram.com/your-handle-one",
-      },
+      { label: "Facebook", href: "https://www.facebook.com/share/1ApZZTDLrj/", handle: "facebook.com/botond" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/botond-németh-07b36b314", handle: "linkedin.com/in/botond-nemeth" },
     ],
-    portrait: createPortraitDataUri("Team Member One", "#0b5c66", "#37cfd0"),
+    portrait: "/app/content/img/botond.jpg",
   },
   {
-    slug: "person-two",
-    name: "Team Member Two",
-    role: "Hardware and wiring",
-    bio:
-      "Works on the practical side of the build and keeps the prototype stable during the demo.",
-    contribution: "Connected the hardware and verified that the smart-home logic behaved correctly.",
-    hobbies: ["Gaming", "Cycling", "Coding"],
+    slug: "nandhan",
+    name: "Nandhan Gunasekaran",
+    role: "Emotional support character",
+    bio: "Robotics and Automation student",
+    contribution: "Hardware integration and testing",
+    hobbies: ["Listening to music", "Watching TV-series", "Gym"],
     socials: [
-      {
-        label: "GitHub",
-        href: "https://github.com/your-handle-two",
-        handle: "github.com/your-handle-two",
-      },
-      {
-        label: "LinkedIn",
-        href: "https://www.linkedin.com/in/your-profile-two/",
-        handle: "linkedin.com/in/your-profile-two",
-      },
-      {
-        label: "Instagram",
-        href: "https://instagram.com/your-handle-two",
-        handle: "instagram.com/your-handle-two",
-      },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/nandhan-gunasekaran/", handle: "linkedin.com/in/nandhan-gunasekaran" },
     ],
-    portrait: createPortraitDataUri("Team Member Two", "#0f7a87", "#66e0dc"),
+    portrait: "/app/content/img/nandhan.jpg",
   },
   {
-    slug: "person-three",
-    name: "Team Member Three",
-    role: "Automation and logic",
-    bio:
-      "Builds the decision logic that makes the home react to light and temperature changes.",
-    contribution: "Implemented the smart-home behavior for the curtains, light, and fan.",
-    hobbies: ["Reading", "Basketball", "Design"],
+    slug: "roxanne",
+    name: "Roxanne Collett",
+    role: "Web developer and Software Architect",
+    bio: "Applied Computer Science student",
+    contribution: "Frontend and site architecture",
+    hobbies: ["Photography", "Cars", "Listening to music", "Reading", "Traveling"],
     socials: [
-      {
-        label: "GitHub",
-        href: "https://github.com/your-handle-three",
-        handle: "github.com/your-handle-three",
-      },
-      {
-        label: "LinkedIn",
-        href: "https://www.linkedin.com/in/your-profile-three/",
-        handle: "linkedin.com/in/your-profile-three",
-      },
-      {
-        label: "Instagram",
-        href: "https://instagram.com/your-handle-three",
-        handle: "instagram.com/your-handle-three",
-      },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/roxanne-collett03122003", handle: "linkedin.com/in/roxanne-collett03122003" },
     ],
-    portrait: createPortraitDataUri("Team Member Three", "#09646d", "#4dd6c8"),
+    portrait: "/app/content/img/roxanne.jpeg",
   },
 ];
 
-export const teamTemplate = `
+export const teamTemplate = `# Smart Home Website Team Template
+
+## Project
+
 Project title:
 
 Project summary:
 
-How the smart home works:
-- What happens when it gets dark?
-- What happens to the lights?
-- What happens when it gets warm?
-- What happens when it cools down?
+1. Project Overview & Objectives
 
 Video file name or link:
 
-Person 1
-- Full name:
-- Role on the team:
-- Short bio:
-- Hobbies:
-- Social links:
-- Photo file name or link:
+## Person 1
 
-Person 2
-- Full name:
-- Role on the team:
-- Short bio:
-- Hobbies:
-- Social links:
-- Photo file name or link:
+Full name:
 
-Person 3
-- Full name:
-- Role on the team:
-- Short bio:
-- Hobbies:
-- Social links:
-- Photo file name or link:
+Role on the team:
+
+Short bio:
+
+Hobbies:
+
+Social links:
+
+Photo file name or link:
+
+## Person 2
+
+Full name:
+
+Role on the team:
+
+Short bio:
+
+Hobbies:
+
+Social links:
+
+Photo file name or link:
+
+## Person 3
+
+Full name:
+
+Role on the team:
+
+Short bio:
+
+Hobbies:
+
+Social links:
+
+Photo file name or link:
 `;
 
 export function getPersonBySlug(slug: string | undefined) {
