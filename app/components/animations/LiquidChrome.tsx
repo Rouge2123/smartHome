@@ -2,7 +2,7 @@ import React from "react";
 
 export default function LiquidChrome({ className }: { className?: string }) {
   return (
-    <div className={className ? className : "pointer-events-none fixed inset-0 -z-10 opacity-80"}>
+    <div className={className ? className : "pointer-events-none fixed inset-0 z-0 opacity-80"}>
       <iframe
         title="liquid-chrome"
         src="https://www.reactbits.dev/backgrounds/liquid-chrome?interactive=false"
