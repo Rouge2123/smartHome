@@ -2,6 +2,9 @@ import { Link, useLoaderData } from "react-router";
 
 import type { Route } from "./+types/team.$personSlug";
 import { getPersonBySlug, people, siteTitle } from "../content/site-data";
+import ShapeBlur from "../components/animations/ShapeBlur";
+import LaserFlow from "../components/animations/LaserFlow";
+import PixelTrail from "../components/animations/PixelTrail";
 
 export async function loader({ params }: Route.LoaderArgs) {
   const person = getPersonBySlug(params.personSlug);
@@ -47,28 +50,24 @@ export default function PersonPage() {
               />
             </div>
 
-            {/* Conditional animation embed for selected profiles */}
-            {(() => {
-              const animMap: Record<string, string> = {
-                roxanne: "https://www.reactbits.dev/animations/shape-blur",
-                nandhan: "https://www.reactbits.dev/animations/laser-flow",
-                botond: "https://www.reactbits.dev/animations/pixel-trail",
-              };
+            {/* Conditional animation component for selected profiles */}
+            {person.slug === "roxanne" && (
+              <div className="overflow-hidden rounded-lg border border-black/10 bg-white">
+                <ShapeBlur />
+              </div>
+            )}
 
-              const src = animMap[person.slug as string];
-              if (!src) return null;
+            {person.slug === "nandhan" && (
+              <div className="overflow-hidden rounded-lg border border-black/10 bg-white">
+                <LaserFlow />
+              </div>
+            )}
 
-              return (
-                <div className="overflow-hidden rounded-lg border border-black/10 bg-white">
-                  <iframe
-                    title={`${person.name} animation`}
-                    src={src}
-                    className="w-full h-56 border-0"
-                    loading="lazy"
-                  />
-                </div>
-              );
-            })()}
+            {person.slug === "botond" && (
+              <div className="overflow-hidden rounded-lg border border-black/10 bg-white">
+                <PixelTrail />
+              </div>
+            )}
           </div>
 
           <div className="space-y-6">
