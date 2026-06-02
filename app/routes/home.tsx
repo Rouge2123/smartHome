@@ -6,6 +6,7 @@ import {
   projectVideoSrc,
   siteTitle,
 } from "../content/site-data";
+import ComponentChecklist from "../components/ComponentChecklist";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -92,6 +93,9 @@ export default function Home() {
                     </p>
                   </article>
                 ))}
+              </div>
+              <div className="pt-8 mt-8 border-t border-[#0f7f84]/10">
+                <ComponentChecklist />
               </div>
             </div>
           </div>

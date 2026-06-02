@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import type { Route } from "./+types/about";
 import { people, siteTitle, teamTemplate } from "../content/site-data";
 import ShapeBlur from "../components/animations/ShapeBlur";
+import PixelTrail from "../components/animations/PixelTrail";
 
 export function meta({}: Route.MetaArgs) {
   return [

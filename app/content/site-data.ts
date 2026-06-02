@@ -86,9 +86,9 @@ export const projectVideoPoster = createVideoPosterDataUri();
 
 export const projectHighlights = [
   {
-    title: "Curtains at dusk",
+    title: "Curtains during the dark",
     description:
-      "When the room gets dark, the curtains open and the space feels ready for the evening.",
+      "When the room gets dark, the curtains close and the space feels more private.",
   },
   {
     title: "Light on when it is dark",
