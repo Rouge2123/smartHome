@@ -9,7 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import LiquidChrome from "./components/animations/LiquidChrome";
+import LiquidChromeInline from "./components/animations/LiquidChromeInline";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -34,7 +34,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <LiquidChrome />
+        <div className="pointer-events-none fixed inset-0 -z-10">
+          <LiquidChromeInline
+            baseColor={[0.00784313725490196, 0.13725490196078433, 0.13725490196078433]}
+            speed={1}
+            amplitude={0.6}
+            interactive={false}
+          />
+        </div>
         <div className="relative z-10">{children}</div>
         <ScrollRestoration />
         <Scripts />
