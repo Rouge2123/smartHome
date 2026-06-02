@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import LiquidChrome from "./components/animations/LiquidChrome";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -33,7 +34,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <LiquidChrome />
+        <div className="relative z-10">{children}</div>
         <ScrollRestoration />
         <Scripts />
       </body>
