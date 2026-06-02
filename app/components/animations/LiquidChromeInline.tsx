@@ -18,9 +18,24 @@ export default function LiquidChromeInline({
     if (!containerRef.current) return;
 
     const container = containerRef.current;
-    const renderer = new Renderer({ antialias: true });
+    let renderer: any;
+    try {
+      renderer = new Renderer({ antialias: true });
+    } catch (err) {
+      console.error("LiquidChromeInline: failed to create renderer", err);
+      return;
+    }
+
     const gl = renderer.gl as any;
-    gl.clearColor(1, 1, 1, 1);
+    if (!gl) {
+      console.error("LiquidChromeInline: WebGL context unavailable");
+      return;
+    }
+    try {
+      gl.clearColor(1, 1, 1, 1);
+    } catch (err) {
+      console.warn("LiquidChromeInline: unable to set clearColor", err);
+    }
 
     const vertexShader = `
       attribute vec2 position;
@@ -139,7 +154,11 @@ export default function LiquidChromeInline({
     }
     animationId = requestAnimationFrame(update);
 
-    container.appendChild(gl.canvas);
+    try {
+      container.appendChild(gl.canvas);
+    } catch (err) {
+      console.error("LiquidChromeInline: failed to append canvas", err);
+    }
 
     return () => {
       cancelAnimationFrame(animationId);

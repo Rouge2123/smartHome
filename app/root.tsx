@@ -34,7 +34,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <div className="pointer-events-none fixed inset-0 -z-10">
+        <div className="pointer-events-none fixed inset-0 z-0">
           <LiquidChromeInline
             baseColor={[0.00784313725490196, 0.13725490196078433, 0.13725490196078433]}
             speed={1}
