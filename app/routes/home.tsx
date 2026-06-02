@@ -2,7 +2,6 @@ import type { Route } from "./+types/home";
 import { Link } from "react-router";
 import {
   projectHighlights,
-  projectStats,
   projectVideoPoster,
   projectVideoSrc,
   siteTitle,
@@ -23,11 +22,8 @@ export default function Home() {
   return (
     <main className="mx-auto min-h-screen max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
       <div className="overflow-hidden rounded-[2rem] border border-[#0f7f84]/20 bg-white/78 shadow-[0_30px_90px_rgba(8,36,41,0.12)] backdrop-blur">
-        <section className="grid gap-8 px-6 py-8 lg:grid-cols-[1.15fr_0.85fr] lg:px-10 lg:py-10">
+        <section className="grid gap-8 px-6 py-8 lg:px-10 lg:py-10">
           <div className="space-y-6">
-            <div className="inline-flex items-center rounded-full border border-[#0f7f84]/20 bg-[#e5fffd] px-4 py-2 text-sm font-medium text-[#0b6470] shadow-sm">
-              Project focus
-            </div>
             <div className="space-y-4">
               <h1 className="font-display text-5xl leading-none tracking-[-0.04em] text-[#07333b] sm:text-6xl lg:text-7xl">
                 A smart home prototype built to react to the environment
@@ -42,7 +38,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-3">
               <a
                 href="#project"
-                className="rounded-full bg-[#0b7f86] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#0a6d74]">
+                className="rounded-full bg-[#0b7f86] px-5 py-3 text-sm font-semibold transition hover:-translate-y-0.5 hover:bg-[#0a6d74]">
                 Jump to project
               </a>
               <a
@@ -52,52 +48,24 @@ export default function Home() {
               </a>
             </div>
           </div>
-
-          <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
-            {projectStats.map((stat) => (
-              <article
-                key={stat.label}
-                className="rounded-[1.5rem] border border-[#0f7f84]/15 bg-[#effffd] p-4 shadow-sm">
-                <p className="text-3xl font-semibold text-[#07333b]">
-                  {stat.value}
-                </p>
-                <p className="mt-1 text-sm uppercase tracking-[0.24em] text-[#0f7f84]">
-                  {stat.label}
-                </p>
-              </article>
-            ))}
-          </div>
         </section>
 
         <section
           id="project"
           className="border-t border-[#0f7f84]/10 px-6 py-8 lg:px-10">
-          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="grid gap-8">
             <div className="space-y-4">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#0f7f84]">
                 From our Arduino project
               </p>
               <h2 className="font-display text-3xl tracking-[-0.03em] text-[#07333b] sm:text-4xl">
-                Automation that is easy to understand and easy to demo
+                Automation that makes day to day life more comfortable
               </h2>
-              <p className="max-w-xl text-base leading-8 text-[#265a60]">
+              <p className="max-w-xl text-base text-[#265a60]">
                 The project was designed to show a practical smart-home
                 workflow: detect light, react to temperature, and give a simple
-                visual result that works well in a presentation.
+                visual result.
               </p>
-              <div className="rounded-[1.5rem] border border-[#0f7f84]/15 bg-[#083a42] p-5 text-white shadow-[0_18px_45px_rgba(8,58,66,0.18)]">
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#8ef7f1]">
-                  Demo video
-                </p>
-                <p className="mt-2 text-sm leading-7 text-white/80">
-                  The video slot is ready for your project recording. Drop the
-                  file in{" "}
-                  <span className="font-medium">
-                    public/smart-home-demo.mp4
-                  </span>
-                  and it will appear here.
-                </p>
-              </div>
             </div>
 
             <div className="space-y-5">
@@ -105,13 +73,13 @@ export default function Home() {
                 <video
                   controls
                   poster={projectVideoPoster}
-                  className="aspect-video w-full bg-black">
+                  className="w-full h-full object-cover">
                   <source src={projectVideoSrc} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
 
-              <div className="grid gap-4 md:grid-cols-2">
+              <div className="grid gap-4 md:grid-cols-3">
                 {projectHighlights.map((highlight) => (
                   <article
                     key={highlight.title}

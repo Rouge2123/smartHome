@@ -84,12 +84,6 @@ function createVideoPosterDataUri() {
 export const projectVideoSrc = "/app/content/img/demo.MOV";
 export const projectVideoPoster = createVideoPosterDataUri();
 
-export const projectStats = [
-  { label: "team members", value: "3" },
-  { label: "automation rules", value: "3" },
-  { label: "project focus", value: "smart home" },
-];
-
 export const projectHighlights = [
   {
     title: "Curtains at dusk",
@@ -106,11 +100,6 @@ export const projectHighlights = [
     description:
       "Warm conditions turn the fan on, and cooler conditions switch it off again.",
   },
-  {
-    title: "Simple purpose",
-    description:
-      "The goal was to build a clear, easy-to-demo smart-home prototype with visible reactions.",
-  },
 ];
 
 export const people: Person[] = [
@@ -118,12 +107,26 @@ export const people: Person[] = [
     slug: "botond",
     name: "Botond Nemeth",
     role: "C# coder and Builder",
-    bio: "Mechatroniks student from Hungary",
+    bio: "Mechatronics student from Hungary",
     contribution: "Core builder and implementation support",
-    hobbies: ["Frizbee", "Bicycle", "Cooking", "Hiking", "Watching TV-shows"],
+    hobbies: [
+      "🥏 Frizzbee",
+      "🚲 Bicycle",
+      "🍳 Cooking",
+      "🥾 Hiking",
+      "📺 Watching TV-shows",
+    ],
     socials: [
-      { label: "Facebook", href: "https://www.facebook.com/share/1ApZZTDLrj/", handle: "facebook.com/botond" },
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/botond-németh-07b36b314", handle: "linkedin.com/in/botond-nemeth" },
+      {
+        label: "Facebook",
+        href: "https://www.facebook.com/share/1ApZZTDLrj/",
+        handle: "facebook.com/botond",
+      },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/botond-németh-07b36b314",
+        handle: "linkedin.com/in/botond-nemeth",
+      },
     ],
     portrait: "/app/content/img/botond.jpg",
   },
@@ -133,9 +136,13 @@ export const people: Person[] = [
     role: "Emotional support character",
     bio: "Robotics and Automation student",
     contribution: "Hardware integration and testing",
-    hobbies: ["Listening to music", "Watching TV-series", "Gym"],
+    hobbies: ["🎧 Listening to music", "📺 Watching TV-series", "🏋️‍♂️ Gym"],
     socials: [
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/nandhan-gunasekaran/", handle: "linkedin.com/in/nandhan-gunasekaran" },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/nandhan-gunasekaran/",
+        handle: "linkedin.com/in/nandhan-gunasekaran",
+      },
     ],
     portrait: "/app/content/img/nandhan.jpg",
   },
@@ -145,9 +152,19 @@ export const people: Person[] = [
     role: "Web developer and Software Architect",
     bio: "Applied Computer Science student",
     contribution: "Frontend and site architecture",
-    hobbies: ["Photography", "Cars", "Listening to music", "Reading", "Traveling"],
+    hobbies: [
+      "📸 Photography",
+      "🚗 Cars",
+      "🎧 Listening to music",
+      "📚 Reading",
+      "✈️ Traveling",
+    ],
     socials: [
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/roxanne-collett03122003", handle: "linkedin.com/in/roxanne-collett03122003" },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/roxanne-collett03122003",
+        handle: "linkedin.com/in/roxanne-collett03122003",
+      },
     ],
     portrait: "/app/content/img/roxanne.jpeg",
   },
