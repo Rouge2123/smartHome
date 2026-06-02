@@ -31,7 +31,7 @@ export default function Home() {
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-[#265a60] sm:text-xl">
                 We built a basic smart-home instance that reacts to the
-                environment: curtains open when it gets dark, the light turns
+                environment: curtains close when it gets dark, the light turns
                 on, and the fan switches on when it is warm and off when it
                 becomes cool again.
               </p>

@@ -8,42 +8,49 @@ const hardwareItems = [
     name: "Arduino Microcontroller",
     description: "The central brain processing the sensor logic.",
     used: "Arduino Uno",
+    picture: "app/content/img/arduino.jpg",
   },
   {
     id: "temp",
     name: "Temperature Sensor",
     description: "Detects room warmth to trigger the fan.",
     used: "DHT11",
+    picture: "",
   },
   {
     id: "light",
     name: "Photoresistor (LDR)",
     description: "Detects ambient light levels to control LEDs and curtains.",
     used: "GL5528",
+    picture: "app/content/img/ldr.jpeg",
   },
   {
     id: "servo",
     name: "Servo Motor",
     description: "The actuator used to physically open and close the curtains.",
     used: "SG90",
+    picture: "app/content/img/servo.jpg",
   },
   {
     id: "fan",
     name: "Small DC Motor / Fan",
     description: "Provides the cooling action when the temperature spikes.",
     used: "5V DC Fan",
+    picture: "app/content/img/fan.jpeg",
   },
   {
     id: "led",
     name: "LEDs",
     description: "For the visual light output.",
     used: "Standard 5mm green LED",
+    picture: "app/content/img/led.jpeg",
   },
   {
     id: "wires",
     name: "Breadboard & Jumper Wires",
     description: "Essential for prototyping the circuit without soldering.",
     used: "Breadboard and Jumper Wires",
+    picture: "app/content/img/wires.jpeg",
   },
 ];
 
@@ -85,7 +92,7 @@ export default function ComponentChecklist() {
         </p>
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-3">
+      <div className="grid gap-3 sm:grid-cols-2">
         {/* 2. Map over sortedItems instead of the static hardwareItems */}
         {sortedItems.map((item) => {
           const isChecked = checkedItems.has(item.id);
@@ -119,21 +126,30 @@ export default function ComponentChecklist() {
                   />
                 </svg>
               </div>
-              <div>
-                <h3
-                  className={`font-display text-lg transition-colors duration-200 ${
-                    isChecked
-                      ? "text-[#0b7f86] line-through decoration-[#0b7f86]/40"
-                      : "text-[#07333b]"
-                  }`}>
-                  {item.name}
-                </h3>
-                <p className="mt-1 text-sm leading-relaxed text-[#265a60]">
-                  {item.description}
-                </p>
-                <p className="mt-1 text-xs italic text-[#0f7f84]">
-                  We used: {item.used}
-                </p>
+              <div className="grid gap-2 grid-cols-2">
+                {item.picture && (
+                  <img
+                    src={item.picture}
+                    alt={item.name}
+                    className="h-auto w-64 rounded-md object-fill"
+                  />
+                )}
+                <div>
+                  <h3
+                    className={`font-display text-lg transition-colors duration-200 ${
+                      isChecked
+                        ? "text-[#0b7f86] line-through decoration-[#0b7f86]/40"
+                        : "text-[#07333b]"
+                    }`}>
+                    {item.name}
+                  </h3>
+                  <p className="mt-1 text-sm leading-relaxed text-[#265a60]">
+                    {item.description}
+                  </p>
+                  <p className="mt-1 text-xs italic text-[#0f7f84]">
+                    We used: {item.used}
+                  </p>
+                </div>
               </div>
             </label>
           );
