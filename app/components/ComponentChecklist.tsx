@@ -14,8 +14,8 @@ const hardwareItems = [
     id: "temp",
     name: "Temperature Sensor",
     description: "Detects room warmth to trigger the fan.",
-    used: "DHT11",
-    picture: "",
+    used: "ST1147",
+    picture: "app/content/img/temp.jpg",
   },
   {
     id: "light",

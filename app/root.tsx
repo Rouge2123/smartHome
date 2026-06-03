@@ -10,6 +10,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import LiquidChromeInline from "./components/animations/LiquidChromeInline";
+import PixelTrail from "./components/animations/PixelTrail";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
